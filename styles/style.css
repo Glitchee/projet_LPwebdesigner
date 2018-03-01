@@ -18,6 +18,12 @@
     height: 50vh;
 }
 
+.box__form__inside, .box__coordonnees__inside{
+    width: 60%;
+    display: block;
+    margin: auto;
+}
+
 .footer__columns{
 }
 
