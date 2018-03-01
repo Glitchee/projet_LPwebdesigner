@@ -1,0 +1,26 @@
+.entete__nav__button-icon{
+
+}
+
+.entete__nav__button-icon .bar{
+    width: inherit;
+    height: 4px;
+    background-color: #58F2AA;
+    margin-top: 5px;
+    border-radius: 2px;
+}
+
+.box__vid{
+    height: 100vh;
+}
+
+.box__homebuttons{
+    height: 50vh;
+}
+
+.footer__columns{
+}
+
+.footer__lien-icone{
+    width: 40px;
+}
