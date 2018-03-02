@@ -1,3 +1,33 @@
+/*///////////////////////////////////////////////////////////////////////
+
+HEADER
+
+///////////////////////////////////////////////////////////////////////*/
+
+.entete{
+    height: 150px;
+}
+
+.entete__nav__nav{
+    justify-content: space-between;
+}
+
+.entete__nav__nav ul{
+    align-self: center;
+}
+
+.entete__nav__nav ul li{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0 2em;
+}
+
+.entete__nav__nav ul li a{
+    color: #f2b42d;
+}
+
 .entete__nav__button-icon{
 
 }
@@ -18,15 +48,91 @@
     height: 50vh;
 }
 
+.box__homebuttons .row{
+    height: inherit;
+}
+
+.box__homebtn_button{
+    height: inherit;
+    position: relative;
+}
+
+.box__homebtn_button:first-of-type{
+    background-image: url("../images/alambic.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.box__homebtn_button:last-of-type{
+    background-image: url("../images/public.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.box__homebtn_button-cover{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.vert{
+    background-color: rgba(88, 242, 172, 0.5);
+}
+
+.orange{
+    background-color: rgba(240, 180, 48, 0.5);
+}
+
 .box__form__inside, .box__coordonnees__inside{
     width: 60%;
     display: block;
     margin: auto;
 }
 
+/*///////////////////////////////////////////////////////////////////////
+
+FOOTER
+
+///////////////////////////////////////////////////////////////////////*/
+
+.footer{
+    height: 120px;
+    background-color: #222222;
+}
+
 .footer__columns{
+    height: inherit;
+}
+
+.footer__column{
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer__column *{
+    text-align: center;
+    font-size: 1.2em;
+    color: #bbbbbb;
+}
+
+.footer__column a:hover{
+    color: #bbbbbb;
+}
+
+.footer__copyright{
+    margin: 0 auto;
+}
+
+.footer__column-icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .footer__lien-icone{
-    width: 40px;
+    width: 80px;
 }

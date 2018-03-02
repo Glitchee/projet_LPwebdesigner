@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <title>Paye ta Fiole : Spectacle de vulgarisation scientifique</title>
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Crete+Round|Roboto:300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
 </head>
+
 <body>
+
     <header class="entete">
         <nav class="navbar-toggleable-md entete__nav">
             <div class="navbar-toggler entete__nav__button" role="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,9 +22,9 @@
             </div>
 
             <div class="collapse navbar-collapse entete__nav__nav" id="navbarTogglerDemo01">
-                <a class="navbar-brand entete__nav__nav-logo" href="#">Paye ta Fiole</a>
+                <a class="navbar-brand entete__nav__nav-logo" href="#"><img src="images/LOGO.png" alt="logo retour à l'accueil"></a>
 
-                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" href="apropos.html">Compagnie</a>
                     </li>
@@ -47,32 +50,36 @@
         <div class="row">
             <div class="col-md-6 col-sm-12 box__homebtn_button">
                 <h2 class="box__homebtn_button-titre">Le duo Paye ta Fiole</h2>
+                <div class="box__homebtn_button-cover vert"></div>
             </div>
             <div class="col-md-6 col-sm-12 box__homebtn_button">
                 <h2 class="box__homebtn_button-titre">Nos spectacles</h2>
+                <div class="box__homebtn_button-cover orange"></div>
             </div>
         </div>
     </div>
 
     <footer>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-3 footer__columns">
-                    <a href="#"><img src="images/facebook.svg" alt="lien vers notre page Facebook" class="footer__lien-icone"></a>
-                    <a href="#"><img src="images/twitter.svg" alt="lien vers notre page Twitter" class="footer__lien-icone"></a>
-                    <a href="#"><img src="images/instagram.svg" alt="lien vers notre page Instagram" class="footer__lien-icone"></a>
+        <div class="container-fluid footer">
+            <div class="row footer__columns">
+                <div class="col-md-3 footer__column">
+                    <div class="footer__column-icons">
+                        <a href="#"><img src="images/facebook.svg" alt="lien vers notre page Facebook" class="footer__lien-icone"></a>
+                        <a href="#"><img src="images/twitter.svg" alt="lien vers notre page Twitter" class="footer__lien-icone"></a>
+                        <a href="#"><img src="images/instagram.svg" alt="lien vers notre page Instagram" class="footer__lien-icone"></a>
+                    </div>
                 </div>
 
-                <div class="col-md-3">
-                    <p class="footer__copyright-1">Développé par Quest</p>
-                    <p class="footer__copyright-2">Paye ta Fiole - ©2018</p>
+                <div class="col-md-3 footer__column">
+                    <p class="footer__copyright">Développé par Quest</p>
+                    <p class="footer__copyright">Paye ta Fiole - ©2018</p>
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-md-3 footer__column">
                     <a href="mentions.html" class="footer__lien">Mentions légales</a>
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-md-3 footer__column">
                     <a href="contact.html" class="footer__lien">Contact</a>
                 </div>
             </div>
