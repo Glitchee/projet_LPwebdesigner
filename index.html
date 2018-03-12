@@ -22,7 +22,7 @@
             </div>
 
             <div class="collapse navbar-collapse entete__nav__nav" id="navbarTogglerDemo01">
-                <a class="navbar-brand entete__nav__nav-logo" href="#"><img src="images/LOGO.png" alt="logo retour à l'accueil"></a>
+                <a class="navbar-brand entete__nav__nav-logo" href="index.html"><img src="images/LOGO.png" alt="logo retour à l'accueil"></a>
 
                 <ul class="navbar-nav">
                     <li class="nav-item">
@@ -39,22 +39,29 @@
         </nav>
     </header>
 
-    <div class="container-fluid box__vid">
-        <video width="100%" height="auto" controls class="box__vid-video">
+    <div id='media-player' class="container-fluid box__vid">
+        <video id='media-video' controls class="box__vid-video">
             <source src="#" type="video/mp4">
             Votre navigateur est obsolète. Vous ne pouvez pas lire la vidéo.
         </video>
+        <div id='media-controls' class="box__vid-controls">
+          <button id='play-pause-button' class='play' title='play' onclick='togglePlayPause();'>Play</button>
+          <button id='stop-button' class='stop' title='stop' onclick='stopPlayer();'>Stop</button>
+          <button id='volume-inc-button' class='volume-plus' title='increase volume' onclick='changeVolume("+");'>Increase volume</button>
+          <button id='volume-dec-button' class='volume-minus' title='decrease volume' onclick='changeVolume("-");'>Decrease volume</button>
+          <button id='mute-button' class='mute' title='mute' onclick='toggleMute();'>Mute</button>
+          <button id='replay-button' class='replay' title='replay' onclick='replayMedia();'>Replay</button>
+          <progress id='progress-bar' min='0' max='100' value='0'>0% played</progress>
+        </div>
     </div>
 
     <div class="container-fluid box__homebuttons">
         <div class="row">
             <div class="col-md-6 col-sm-12 box__homebtn_button">
-                <h2 class="box__homebtn_button-titre">Le duo Paye ta Fiole</h2>
-                <div class="box__homebtn_button-cover vert"></div>
+                <div class="box__homebtn_button-cover vert"><h2 class="box__homebtn_button-titre">Le duo Paye ta Fiole</h2></div>
             </div>
             <div class="col-md-6 col-sm-12 box__homebtn_button">
-                <h2 class="box__homebtn_button-titre">Nos spectacles</h2>
-                <div class="box__homebtn_button-cover orange"></div>
+                <div class="box__homebtn_button-cover orange"><h2 class="box__homebtn_button-titre">Nos spectacles</h2></div>
             </div>
         </div>
     </div>
@@ -89,5 +96,6 @@
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="styles/scripts.js"></script>
 </body>
 </html>
