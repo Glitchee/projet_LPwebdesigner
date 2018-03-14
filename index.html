@@ -41,17 +41,17 @@
 
     <div id='media-player' class="container-fluid box__vid">
         <video id='media-video' controls class="box__vid-video">
-            <source src="#" type="video/mp4">
+            <source src="slice.mp4" type="video/mp4">
             Votre navigateur est obsolète. Vous ne pouvez pas lire la vidéo.
         </video>
         <div id='media-controls' class="box__vid-controls">
-          <button id='play-pause-button' class='play' title='play' onclick='togglePlayPause();'>Play</button>
-          <button id='stop-button' class='stop' title='stop' onclick='stopPlayer();'>Stop</button>
-          <button id='volume-inc-button' class='volume-plus' title='increase volume' onclick='changeVolume("+");'>Increase volume</button>
-          <button id='volume-dec-button' class='volume-minus' title='decrease volume' onclick='changeVolume("-");'>Decrease volume</button>
-          <button id='mute-button' class='mute' title='mute' onclick='toggleMute();'>Mute</button>
-          <button id='replay-button' class='replay' title='replay' onclick='replayMedia();'>Replay</button>
-          <progress id='progress-bar' min='0' max='100' value='0'>0% played</progress>
+          <button id='play-pause-button' class='play' title='play' onclick='togglePlayPause();'><img src="images/icones/play.svg" alt="Jouer la vidéo"></button>
+          <button id='stop-button' class='stop' title='stop' onclick='stopPlayer();'><img src="images/icones/stop.svg" alt="Arrêter la vidéo"></button>
+          <progress id='progress-bar' max='100' value='0'></progress>
+          <button id='volume-inc-button' class='volume-plus' title='increase volume' onclick='changeVolume("+");'><img src="images/icones/volume-up.svg" alt="Augmenter le volume"></button>
+          <button id='volume-dec-button' class='volume-minus' title='decrease volume' onclick='changeVolume("-");'><img src="images/icones/volume-down.svg" alt="Baisser le volume"></button>
+          <button id='mute-button' class='mute' title='mute' onclick='toggleMute();'><img src="images/icones/mute.svg" alt="Couper le son"></button>
+          <button id='replay-button' class='replay' title='replay' onclick='replayMedia();'><img src="images/icones/replay.svg" alt="Rejouer la vidéo"></button>
         </div>
     </div>
 

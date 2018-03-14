@@ -28,10 +28,6 @@ HEADER
     color: #f2b42d;
 }
 
-.entete__nav__button-icon{
-
-}
-
 .entete__nav__button-icon .bar{
     width: inherit;
     height: 4px;
@@ -40,8 +36,49 @@ HEADER
     border-radius: 2px;
 }
 
+/*///////////////////////////////////////////////////////////////////////
+
+VIDEO
+
+///////////////////////////////////////////////////////////////////////*/
+
 .box__vid{
-    height: 100vh;
+    height: calc(100vh - 150px);
+    width: 100%;
+    padding: 0;
+    position: relative;
+    background-color: black;
+}
+
+.box__vid-video{
+    height: inherit;
+    width: inherit;
+}
+
+.box__vid-controls{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: #59F2AB;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.box__vid-controls progress{
+    height: inherit;
+    width: 90%;
+}
+
+.box__vid-controls button{
+    border: 0;
+    background-color: transparent;
+}
+
+.box__vid-controls button img{
+    height: 30px;
 }
 
 .box__homebuttons{

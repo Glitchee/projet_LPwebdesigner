@@ -11,13 +11,13 @@ function togglePlayPause() {
    var btn = document.getElementById('play-pause-button');
    if (mediaPlayer.paused || mediaPlayer.ended) {
       btn.title = 'pause';
-      btn.innerHTML = 'pause';
+      btn.innerHTML = '<img src="./images/icones/pause.svg" alt="Mettre la vidéo en pause">';
       btn.className = 'pause';
       mediaPlayer.play();
    }
    else {
       btn.title = 'play';
-      btn.innerHTML = 'play';
+      btn.innerHTML = '<img src="./images/icones/play.svg" alt="Jouer la vidéo">';
       btn.className = 'play';
       mediaPlayer.pause();
    }
@@ -57,23 +57,34 @@ function replayMedia() {
    mediaPlayer.play();
 }
 
-function resetPlayer() {
-   mediaPlayer.currentTime = 0;
-   changeButtonType(playPauseBtn, 'play');
-}
-
-mediaPlayer.addEventListener('timeupdate', updateProgressBar, false);
+document.getElementById('media-video').addEventListener('timeupdate', updateProgressBar, false);
 
 function updateProgressBar() {
    var progressBar = document.getElementById('progress-bar');
    var percentage = Math.floor((100 / mediaPlayer.duration) *
    mediaPlayer.currentTime);
    progressBar.value = percentage;
-   progressBar.innerHTML = percentage + '% played';
 }
 
 function resetPlayer() {
-   progressBar.value = 0;
-   mediaPlayer.currentTime = 0;
-   changeButtonType(playPauseBtn, 'play');
+    mediaPlayer.currentTime = 0;
+    changeButtonType(playPauseBtn, 'play');
+    progressBar.value = 0;
+    mediaPlayer.currentTime = 0;
+    changeButtonType(playPauseBtn, 'play');
 }
+
+/*document.getElementById('media-video').addEventListener('play', function() {
+    var btn = document.getElementById('play-pause-button');
+    changeButtonType(btn, 'pause');
+}, false);
+document.getElementById('media-video').addEventListener('pause', function() {
+    var btn = document.getElementById('play-pause-button');
+    changeButtonType(btn, 'play');
+}, false);
+
+document.getElementById('media-video').addEventListener('volumechange', function(e) {
+    var btn = document.getElementById('mute-button');
+    if (mediaPlayer.muted) changeButtonType(btn, 'unmute');
+    else changeButtonType(btn, 'mute');
+}, false);*/
