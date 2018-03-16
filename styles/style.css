@@ -149,6 +149,7 @@ SLIDESHOW PAGE A PROPOS
 .slideshow-container{
     width: 100%;
     position: relative;
+    margin: auto;
 }
 
 .mySlides{
