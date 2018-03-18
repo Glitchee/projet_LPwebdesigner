@@ -1,3 +1,11 @@
+html, body{
+    height: 100%;
+    margin: 0;
+}
+
+img{
+    vertical-align: middle;
+}
 /*///////////////////////////////////////////////////////////////////////
 
 HEADER
@@ -34,6 +42,11 @@ HEADER
     background-color: #58F2AA;
     margin-top: 5px;
     border-radius: 2px;
+}
+
+main{
+    min-height: 100%;
+    margin-bottom: -120px;
 }
 
 /*///////////////////////////////////////////////////////////////////////
@@ -107,6 +120,7 @@ VIDEO
 }
 
 .box__homebtn_button-cover{
+    cursor: pointer;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -122,12 +136,21 @@ VIDEO
     width: 12em;
     text-align: center;
     font-size: 1.2em;
+    font-weight: 700;
     background-color: white;
     padding: 1em;
 }
 
 .vert{
     background-color: rgba(88, 242, 172, 0.5);
+}
+
+.vert .box__homebtn_button-titre{
+    border: 3px solid #59F2AB;
+}
+
+.orange .box__homebtn_button-titre{
+    border: 3px solid #F1B42E;
 }
 
 .orange{
@@ -148,12 +171,20 @@ SLIDESHOW PAGE A PROPOS
 
 .slideshow-container{
     width: 100%;
+    height: calc(95vh - 150px);
+    overflow: hidden;
     position: relative;
     margin: auto;
 }
 
 .mySlides{
     display: none;
+}
+
+.mySlides img{
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
 }
 
 .prev, .next {
@@ -163,20 +194,20 @@ SLIDESHOW PAGE A PROPOS
     width: auto;
     margin-top: -22px;
     padding: 16px;
-    color: white;
+    color: white !important;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 2em;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
 }
 
 .next {
-    right: 0;
+    right: 0.5em;
     border-radius: 3px 0 0 3px;
 }
 
 .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(255,255,255,0.8);
 }
 
 .numbertext {
@@ -187,19 +218,23 @@ SLIDESHOW PAGE A PROPOS
     top: 0;
 }
 
+.slideshow-nav{
+    height: 3em;
+}
+
 .dot {
     cursor: pointer;
     height: 15px;
     width: 15px;
     margin: 0 2px;
-    background-color: #bbb;
+    background-color: rgba(255, 252, 151, 0.8);
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
 }
 
 .active, .dot:hover {
-    background-color: #717171;
+    background-color: #F1B42E;
 }
 
 .fade {
@@ -207,6 +242,7 @@ SLIDESHOW PAGE A PROPOS
     -webkit-animation-duration: 1.5s;
     animation-name: fade;
     animation-duration: 1.5s;
+    animation-fill-mode: forwards;
 }
 
 @-webkit-keyframes fade {
@@ -221,12 +257,128 @@ SLIDESHOW PAGE A PROPOS
 
 /*///////////////////////////////////////////////////////////////////////
 
-FOOTER
+INFOS PAGE A PROPOS
 
 ///////////////////////////////////////////////////////////////////////*/
 
-.footer{
+.box-1{
+    background-color: #59F2AB;
+}
+
+.box__text h1{
+    padding: 0.5em;
+    display: block;
+    margin: 1em auto;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.box-1 h1{
+    background-color: white;
+    width: 11em;
+}
+
+.box-2 h1{
+    background-color: #59F2AB;
+    width: 13em;
+}
+
+.box__text-par{
+    width: 85%;
+    margin: 0 auto 2em;
+    padding: 1em;
+}
+
+.box-1 .box__text-par{
+    background-color: white;
+}
+
+.box-2 .box__text-par{
+    background-color: #59F2AB;
+}
+
+.box__text-par h2{
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.box__text-par p{
+    margin-bottom: 2em;
+}
+
+/*///////////////////////////////////////////////////////////////////////
+
+CONTACT
+
+///////////////////////////////////////////////////////////////////////*/
+
+main
+{
+    margin: 2.2em 0em;
+}
+
+.form-control
+{
+    margin: 2em 0em;
+    border: 1px solid #f2b42d;
+}
+
+.box__coordonnees-titre
+{
+    color: #f2b42d;
+}
+
+.box__coordonnees-infos
+{
+    text-align: justify;
+}
+
+/*///////////////////////////////////////////////////////////////////////
+
+MENTIONS LEGALES
+
+///////////////////////////////////////////////////////////////////////*/
+
+.box__mention__title
+{
+    width: 25%;
+    height: 60px;
+    margin: auto;
+     margin-bottom: 1.5em;
+    
+    line-height: 50px;
+    text-align: center;
+    
+    font-size: 2em;
+    border: 2px solid #f2b42d;
+    
+    color: #f2b42d;
+}
+
+.box__mention__text
+{
+    width: 75%;
+    margin: auto;
+    
+    text-align: justify;
+}
+
+.box__mention__text h2
+{
+    font-size: 1.3em;
+}
+
+/*///////////////////////////////////////////////////////////////////////
+
+FOOTER
+
+///////////////////////////////////////////////////////////////////////*/
+.footer, .push{
     height: 120px;
+}
+
+.footer{
     background-color: #222222;
 }
 
@@ -263,4 +415,16 @@ FOOTER
 
 .footer__lien-icone{
     width: 80px;
+}
+
+/*///////////////////////////////////////////////////////////////////////
+
+MEDIA QUERIES
+
+///////////////////////////////////////////////////////////////////////*/
+
+@media screen and (max-width: 650px){
+    footer{
+        height: 20vh;
+    }
 }
