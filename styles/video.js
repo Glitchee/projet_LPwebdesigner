@@ -9,11 +9,13 @@ function initialiseMediaPlayer() {
 
 function togglePlayPause() {
     var btn = document.getElementById('play-pause-button');
+    var btn2 = document.getElementById('centered-play-pause-button');
     if (mediaPlayer.paused || mediaPlayer.ended) {
         btn.title = 'pause';
         btn.innerHTML = '<img src="./images/icones/pause.svg" alt="Mettre la vidéo en pause">';
         btn.className = 'pause';
         mediaPlayer.play();
+        btn2.style.display = "none";
     }
     else {
         btn.title = 'play';

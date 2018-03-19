@@ -43,18 +43,19 @@
     <main>
 
         <div id='media-player' class="container-fluid box__vid">
-            <video id='media-video' controls class="box__vid-video">
-                <source src="slice.mp4" type="video/mp4">
+            <video id='media-video' controls class="box__vid-video" onclick='togglePlayPause();'>
+                <source src="vid_payetafiole.mp4" type="video/mp4">
                 Votre navigateur est obsolète. Vous ne pouvez pas lire la vidéo.
             </video>
+            <div id="centered-play-pause-button"><img src="images/icones/play-centered.svg" alt="Jouer la vidéo"></div>
             <div id='media-controls' class="box__vid-controls">
-            <button id='play-pause-button' class='play' title='play' onclick='togglePlayPause();'><img src="images/icones/play.svg" alt="Jouer la vidéo"></button>
-            <button id='stop-button' class='stop' title='stop' onclick='stopPlayer();'><img src="images/icones/stop.svg" alt="Arrêter la vidéo"></button>
-            <progress id='progress-bar' max='100' value='0'></progress>
-            <button id='volume-inc-button' class='volume-plus' title='increase volume' onclick='changeVolume("+");'><img src="images/icones/volume-up.svg" alt="Augmenter le volume"></button>
-            <button id='volume-dec-button' class='volume-minus' title='decrease volume' onclick='changeVolume("-");'><img src="images/icones/volume-down.svg" alt="Baisser le volume"></button>
-            <button id='mute-button' class='mute' title='mute' onclick='toggleMute();'><img src="images/icones/mute.svg" alt="Couper le son"></button>
-            <button id='replay-button' class='replay' title='replay' onclick='replayMedia();'><img src="images/icones/replay.svg" alt="Rejouer la vidéo"></button>
+                <button id='play-pause-button' class='play' title='play' onclick='togglePlayPause();'><img src="images/icones/play.svg" alt="Jouer la vidéo"></button>
+                <button id='stop-button' class='stop' title='stop' onclick='stopPlayer();'><img src="images/icones/stop.svg" alt="Arrêter la vidéo"></button>
+                <progress id='progress-bar' max='100' value='0'></progress>
+                <button id='volume-inc-button' class='volume-plus' title='increase volume' onclick='changeVolume("+");'><img src="images/icones/volume-up.svg" alt="Augmenter le volume"></button>
+                <button id='volume-dec-button' class='volume-minus' title='decrease volume' onclick='changeVolume("-");'><img src="images/icones/volume-down.svg" alt="Baisser le volume"></button>
+                <button id='mute-button' class='mute' title='mute' onclick='toggleMute();'><img src="images/icones/mute.svg" alt="Couper le son"></button>
+                <button id='replay-button' class='replay' title='replay' onclick='replayMedia();'><img src="images/icones/replay.svg" alt="Rejouer la vidéo"></button>
             </div>
         </div>
 
@@ -76,7 +77,7 @@
             <div class="row footer__columns">
                 <div class="col-md-3 footer__column">
                     <div class="footer__column-icons">
-                        <a href="#"><img src="images/facebook.svg" alt="lien vers notre page Facebook" class="footer__lien-icone"></a>
+                        <a href="https://www.facebook.com/docteurFiole/"><img src="images/facebook.svg" alt="lien vers notre page Facebook" class="footer__lien-icone"></a>
                         <a href="#"><img src="images/twitter.svg" alt="lien vers notre page Twitter" class="footer__lien-icone"></a>
                         <a href="#"><img src="images/instagram.svg" alt="lien vers notre page Instagram" class="footer__lien-icone"></a>
                     </div>

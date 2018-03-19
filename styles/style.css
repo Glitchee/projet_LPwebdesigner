@@ -13,11 +13,12 @@ HEADER
 ///////////////////////////////////////////////////////////////////////*/
 
 .entete{
-    height: 150px;
+    height: auto;
 }
 
 .entete__nav__nav{
     justify-content: space-between;
+    background-color: white;
 }
 
 .entete__nav__nav ul{
@@ -47,6 +48,7 @@ HEADER
 main{
     min-height: 100%;
     margin-bottom: -120px;
+    z-index: -10;
 }
 
 /*///////////////////////////////////////////////////////////////////////
@@ -56,7 +58,7 @@ VIDEO
 ///////////////////////////////////////////////////////////////////////*/
 
 .box__vid{
-    height: calc(100vh - 150px);
+    height: calc(100vh - 145px);
     width: 100%;
     padding: 0;
     position: relative;
@@ -68,21 +70,43 @@ VIDEO
     width: inherit;
 }
 
+#centered-play-pause-button{
+    position: absolute;
+    height: 200px;
+    top: 35%;
+    left: 45%;
+}
+
+#centered-play-pause-button img{
+    height: inherit;
+}
+
 .box__vid-controls{
     width: 100%;
     position: absolute;
     bottom: 0;
-    background-color: #59F2AB;
+    background-color: rgb(69, 194, 135);
     height: 40px;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
 }
 
-.box__vid-controls progress{
+.box__vid-controls progress[value]{
+    -webkit-appearance: none;
+    appearance: none;
     height: inherit;
-    width: 90%;
+    width: 80%;
+}
+
+.box__vid-controls progress[value]::-webkit-progress-bar{
+    background-color: #b5ffdf;
+    border: 0;
+}
+
+.box__vid-controls progress[value]::-webkit-progress-value{
+    background-color: #72a891;
 }
 
 .box__vid-controls button{
@@ -313,15 +337,19 @@ CONTACT
 
 ///////////////////////////////////////////////////////////////////////*/
 
-main
-{
-    margin: 2.2em 0em;
+.content__form{
+    margin-top: 7em;
 }
 
 .form-control
 {
     margin: 2em 0em;
-    border: 1px solid #f2b42d;
+    border: 2px solid #f2b42d;
+    border-radius: 0;
+}
+
+.form-control:focus{
+    border-color: #aa7f23
 }
 
 .box__coordonnees-titre
@@ -329,10 +357,6 @@ main
     color: #f2b42d;
 }
 
-.box__coordonnees-infos
-{
-    text-align: justify;
-}
 
 /*///////////////////////////////////////////////////////////////////////
 
