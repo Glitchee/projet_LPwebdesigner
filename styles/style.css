@@ -6,6 +6,11 @@ html, body{
 img{
     vertical-align: middle;
 }
+
+h1, h2{
+    font-family: Crete Round;
+}
+
 /*///////////////////////////////////////////////////////////////////////
 
 HEADER
@@ -37,6 +42,15 @@ HEADER
     color: #f2b42d;
 }
 
+.entete__nav__nav ul li a:hover{
+    color: #7CC399;
+}
+
+.entete__nav__nav ul li .couleur{
+    color: #7CC399;
+    border-bottom: 2px solid #7CC399;
+}
+
 .entete__nav__button-icon .bar{
     width: inherit;
     height: 4px;
@@ -47,8 +61,8 @@ HEADER
 
 main{
     min-height: 100%;
+    height: auto !important;
     margin-bottom: -120px;
-    z-index: -10;
 }
 
 /*///////////////////////////////////////////////////////////////////////
@@ -160,13 +174,24 @@ VIDEO
     width: 12em;
     text-align: center;
     font-size: 1.2em;
+    color: black;
     font-weight: 700;
     background-color: white;
     padding: 1em;
+    transition: margin-bottom 0.5s;
+}
+
+.box__homebtn_button-titre:hover{
+    margin-bottom: 50px;
 }
 
 .vert{
-    background-color: rgba(88, 242, 172, 0.5);
+    background-color: rgba(88, 242, 172, 0.4);
+    transition: background-color 1s;
+}
+
+.vert:hover{
+    background-color: rgba(88, 242, 172, 0.6);
 }
 
 .vert .box__homebtn_button-titre{
@@ -178,7 +203,12 @@ VIDEO
 }
 
 .orange{
-    background-color: rgba(240, 180, 48, 0.5);
+    background-color: rgba(240, 180, 48, 0.4);
+    transition: background-color 1s;
+}
+
+.orange:hover{
+    background-color: rgba(240, 180, 48, 0.6);
 }
 
 .box__form__inside, .box__coordonnees__inside{
@@ -199,6 +229,7 @@ SLIDESHOW PAGE A PROPOS
     overflow: hidden;
     position: relative;
     margin: auto;
+    padding: 0;
 }
 
 .mySlides{
@@ -234,12 +265,15 @@ SLIDESHOW PAGE A PROPOS
     background-color: rgba(255,255,255,0.8);
 }
 
-.numbertext {
+.text {
     color: #f2f2f2;
-    font-size: 12px;
+    background-color: rgba(0,0,0,0.8);
+    font-size: 24px;
     padding: 8px 12px;
     position: absolute;
-    top: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
 }
 
 .slideshow-nav{
@@ -333,6 +367,40 @@ INFOS PAGE A PROPOS
 
 /*///////////////////////////////////////////////////////////////////////
 
+INFOS PAGE SPECTACLE
+
+///////////////////////////////////////////////////////////////////////*/
+.bloc__poster{
+    background-color: #f2b42d62;
+    padding: 1.5em 0;
+}
+
+.poster{
+    display: block;
+    margin: auto;
+    height: 600px;
+    
+}
+
+.poster img{
+    height: inherit;
+}
+
+.spectacle{
+    margin-top: 5em;
+}
+
+.par-spectacle{
+    font-size: 1.2em;
+    width: 50%;
+}
+
+.par-spectacle p{
+    text-align: justify;
+}
+
+/*///////////////////////////////////////////////////////////////////////
+
 CONTACT
 
 ///////////////////////////////////////////////////////////////////////*/
@@ -383,7 +451,7 @@ MENTIONS LEGALES
 .box__mention__text
 {
     width: 75%;
-    margin: auto;
+    margin: 0 auto 10em;
     
     text-align: justify;
 }
@@ -404,6 +472,8 @@ FOOTER
 
 .footer{
     background-color: #222222;
+    height: auto;
+    padding: 1.5em;
 }
 
 .footer__columns{
@@ -438,7 +508,7 @@ FOOTER
 }
 
 .footer__lien-icone{
-    width: 80px;
+    height: 80px;
 }
 
 /*///////////////////////////////////////////////////////////////////////
@@ -447,8 +517,18 @@ MEDIA QUERIES
 
 ///////////////////////////////////////////////////////////////////////*/
 
-@media screen and (max-width: 650px){
-    footer{
-        height: 20vh;
+@media screen and (max-width: 770px){
+    .box__homebuttons{
+        margin-bottom: 18em;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .par-spectacle{
+        width: 100%;
+    }
+
+    .par-spectacle p{
+        text-align: left;
     }
 }
